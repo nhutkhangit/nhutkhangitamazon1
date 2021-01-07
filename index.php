@@ -30,7 +30,7 @@
                 <div class="owl-slider owl-carousel owl-theme">
                   <?php foreach ($arr1 as $key) { ?>
                     <div class="item">
-                      <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>"  title="<?php echo $key['title']; ?>" class="w-100"/></a>
+                      <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img class="set-height" src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>"  title="<?php echo $key['title']; ?>" class="w-100"/></a>
                       <h2><a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><?php echo $key['title']; ?></a></h2>
                       <p class="date"><span>Ngày đăng: <?php echo date_format(date_create($key['date_upload']), "d-m-Y"); ?></span> <span>Lượt xem: <?php echo number_format($key['view']); ?></span></p>
                       <p class="summary">
@@ -51,7 +51,7 @@
                 <div class="row">
                   <?php foreach ($arr1 as $key) { ?>
                   <div class="col-md-4">
-                    <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>" title="<?php echo $key['title']; ?>" class="w-100"/></a>
+                    <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img class="height-slider-blog" src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>" title="<?php echo $key['title']; ?>" class="w-100"/></a>
                     <h2 class="title-section-2">
                       <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>">
                         <?php
@@ -74,7 +74,7 @@
                 <?php foreach ($arr2 as $key) { ?>
                 <div class="row section-article">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 section-image-article">
-                      <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>" title="<?php echo $key['title']; ?>" class="w-100"/></a>
+                      <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img class="height-slider-blog" src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>" title="<?php echo $key['title']; ?>" class="w-100"/></a>
                     </div>
                     <div class="col-lg-8 col-md-8 col-sm-4 col-xs-12 detail-article">
                       <h2><a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><?php echo $key['title']; ?></a></h2>

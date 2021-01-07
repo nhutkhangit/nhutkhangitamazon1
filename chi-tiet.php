@@ -92,10 +92,10 @@
                   <!-- relation-box -->
                 </div>
                 <!-- relation article -->
-                <!-- <div class="comment-section">
+                <div class="comment-section">
                   <h2>Bình luận bài viết</h2>
-                  <div class="fb-comments" data-href="http://localhost/bloggame/chi-tiet.php?id=<?php echo $id_tin ?>" data-width="100%" data-numposts="5"></div>
-                </div> -->
+                        
+                </div>
                 <!-- comment section -->
               </div>
               <!-- detail section -->

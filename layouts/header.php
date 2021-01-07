@@ -17,14 +17,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/images/icon.png">
-    <title>TRANG TIN VỀ GAME HOT NHẤT | BLOGGAME</title>
+    <title>TRANG TIN VỀ GAME HOT NHẤT | LNKBlog</title>
     <!-- Style -->
     <link rel="stylesheet" href="css/style.css"/>
     <link rel="stylesheet" href="css/responsive.css"/>
     <!-- Bootstrap 4 -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Fonts Awesome -->
-    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <!-- <link rel="stylesheet" href="assets/css/all.css"> -->
     <!-- owlCarousel -->
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">

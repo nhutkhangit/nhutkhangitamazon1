@@ -3,8 +3,7 @@
   include('layouts/header.php');
 
   // detail Blog
-  if(isset($_GET['id']))
-  {
+  if(isset($_GET['id']) && (is_numeric($_GET['id']))){
     $id_tin = $_GET['id'];
     $data = "SELECT id_blog, b.id_type as id_type, typename, title, b.image as image, name, summary, content, date_upload, view FROM blog b, type_blog tb, account a WHERE b.id_type = tb.id_type AND b.author = a.id_acc AND id_blog = $id_tin";
     $result = mysqli_query($conn, $data);
@@ -16,17 +15,16 @@
     // update view
     $upView = "UPDATE blog SET view = $viewCurrent + 1 WHERE id_blog = $id_tin";
     mysqli_query($conn, $upView);
-  }
 
-  // Related postsda
-  $data2 = "SELECT * FROM blog WHERE id_type = $id_type AND id_blog <> $id_tin AND date_upload < '$date_blog' ORDER BY date_upload DESC";
-  $result2 = mysqli_query($conn, $data2);
-  $arr2 = array();
-  while($row2 = mysqli_fetch_array($result2)){
-    $arr2[] = $row2;
-  }
-
-?>
+    // Related postsda
+    $data2 = "SELECT * FROM blog WHERE id_type = $id_type AND id_blog <> $id_tin AND date_upload < '$date_blog' ORDER BY date_upload DESC";
+    $result2 = mysqli_query($conn, $data2);
+    $arr2 = array();
+    if(!empty($result2)){
+      while($row2 = mysqli_fetch_array($result2)){
+        $arr2[] = $row2;
+      }
+      ?>
       <!-- header -->
       <content class="content">
         <div class="section-breadcrum">
@@ -70,8 +68,8 @@
                     <div class="owl-relation owl-carousel owl-theme">
                       <?php foreach ($arr2 as $key): ?>
                       <div class="item">
-                        <a href="#"><img src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>" title="<?php echo $key['title']; ?>" class="w-100"/></a>
-                        <h2 align="justify"><a href="#">
+                        <a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>"><img src="admin/pages/public/images/blogs/<?php echo $key['image']; ?>" alt="<?php echo $key['image']; ?>" title="<?php echo $key['title']; ?>" class="w-100"/></a>
+                        <h2 align="justify"><a href="chi-tiet.php?id=<?php echo $key['id_blog'];  ?>">
                           <?php
                               if(strlen($key['title']) > 50)
                                 echo mb_substr($key['title'], 0, 50, 'UTF-8')."...";
@@ -109,6 +107,15 @@
         </div>
       </content>
       <!-- content -->
+      <?php  
+    }else{
+      ?><meta http-equiv="refresh" content="5;url=https://nhutkhangit.xyz/" /><?php
+    }
+  }else{
+    ?><meta http-equiv="refresh" content="5;url=https://nhutkhangit.xyz/" /><?php
+  }
+?>
+      
 <?php
   // include layouts
   include('layouts/footer.php');

@@ -32,7 +32,7 @@
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                <li class="breadcrumb-item"><a href="#"><?php echo $row['typename']; ?></a></li>
+                <li class="breadcrumb-item"><a href="loai-tin.php?type=<?php echo $row['id_type']; ?>"><?php echo $row['typename']; ?></a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $row['title']; ?></li>
               </ol>
             </nav>

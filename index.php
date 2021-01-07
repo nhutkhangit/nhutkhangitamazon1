@@ -19,7 +19,6 @@
     {
       $arr2[] = $row2;
     }
-
 ?>
       <!-- header -->
       <content class="content">

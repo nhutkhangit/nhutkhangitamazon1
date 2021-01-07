@@ -343,8 +343,9 @@
 }
 
 .set-height {
-  height: 470px;;
+  height: 470px;
 }
 .height-slider-blog {
   height: 150px;
+  width: 100%;
 }
